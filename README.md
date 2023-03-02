@@ -1,5 +1,5 @@
 ## Ping Monitor
-A program to monitor a number of hosts using ping. The program exits when all monitored hosts have an outage. The program allows specifying the ping source interface by IP. For Windows.
+A program to monitor a number of hosts using ping. The program exits when all monitored hosts have an outage. The program allows specifying the ping source interface by IP address. For Windows.
 
 ## Use cases
 If there is some network connection that occasionally misbehaves and loses reliable connection then you can use Ping Monitor tool to launch corrective actions upon detection of the occurrence of the problem. 
