@@ -1,0 +1,2 @@
+﻿
+.NET Reference Source, Microsoft Corporation, MIT License. https://github.com/microsoft/referencesource

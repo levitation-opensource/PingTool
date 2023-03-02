@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningsAsErrors>0078;0108;0109;0642;0693;1699;1717</WarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningsAsErrors>0078;0108;0109;0642;0693;1699;1717</WarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2A6595F0-0A03-4B02-8D26-78929BBFCFD2}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PingTool</RootNamespace>
+    <AssemblyName>PingTool</AssemblyName>
+    <TargetFrameworkVersion>v3.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <StartupObject>PingTool.Program</StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release .net 3.0|x86' ">
+    <OutputPath>bin\x86\Release .net 3.0\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningsAsErrors>0078;0108;0109;0642;0693;1699;1717</WarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdaptedReferenceSource\Internal.cs" />
+    <Compile Include="AdaptedReferenceSource\IPAddress.cs" />
+    <Compile Include="AdaptedReferenceSource\OSSOCK.cs" />
+    <Compile Include="AdaptedReferenceSource\Sockets.cs" />
+    <Compile Include="ConsoleArguments.cs" />
+    <Compile Include="ExitHandlers.cs" />
+    <Compile Include="GetConsoleArgumentsValues.cs" />
+    <Compile Include="AdaptedReferenceSource\SafeNetHandles.cs" />
+    <Compile Include="AdaptedReferenceSource\UnSafeNetInfoNativemethods.cs" />
+    <None Include="app.config" />
+    <Compile Include="AdaptedReferenceSource\IPEndPoint.cs" />
+    <Compile Include="NativeMethods.cs" />
+    <Compile Include="OutputConsoleArgumentsHelp.cs" />
+    <Compile Include="AdaptedReferenceSource\Ping.cs" />
+    <Compile Include="AdaptedReferenceSource\PingOptions.cs" />
+    <Compile Include="AdaptedReferenceSource\PingReply.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="AdaptedReferenceSource\SocketAddress.cs" />
+    <Compile Include="AdaptedReferenceSource\UnsafeNativeMethods.cs" />
+    <None Include="example.bat" />
+    <None Include="LICENSE" />
+    <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="copyrights.txt" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
