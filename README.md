@@ -16,7 +16,8 @@ Example batch file content:
 	PingTool.exe -host=8.8.8.8 -host=8.8.4.4 -sourceHost=192.168.0.3
 	netsh mbn disconnect interface="Mobile Broadband Connection"
 	netsh mbn connect interface="Mobile Broadband Connection" connmode=name name="Your Service Provider Name"
-	sleep 15
+	ping -n 16 127.0.0.1
+	REM sleep 15
 	goto s
 
 The above example pings two IP addresses belonging to Google. The pings are performed via the network interface having a local address of 192.168.0.3. Once pings to ALL of the specified target IP addresses start failing, the network connection is restarted by the following commands in the batch file. By default the trigger activates (that is, Ping Tool quits) when ALL of the target IP addresses fail ping for 3 consequtive checks with 5 second intervals, and then the outage continues for another 30 seconds after that. If the monitored IP addresses ping successfully during that additional time interval then the trigger is reset and Ping Tool continues running without quitting.
